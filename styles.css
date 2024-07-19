@@ -1,0 +1,570 @@
+/* <----------------GLOBAL RULES----------------> */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--primary-color: #e6533c;
+	--white: #ffffff;
+	--white-60: rgba(255, 255, 255, 0.6);
+	--white-50: rgba(255, 255, 255, 0.5);
+	--white-10: rgba(255, 255, 255, 0.1);
+	--black: #000000;
+	--grey: #393939;
+	--grey-60: rgba(57, 57, 57, 0.6);
+
+	--font-main: 'Inter', Arial, Helvetica, sans-serif;
+	--font-fansy: 'Miama', Times, serif;
+	--regular: 400;
+	--font-medium: 500;
+	--semi-bold: 600;
+	--bold: 700;
+	--extra-bold: 800;
+	--font-black: 900;
+}
+
+body {
+	background-color: var(--black);
+	color: var(--white);
+	font-family: var(--font-main);
+	font-weight: var(--regular);
+	line-height: 1.8;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* <----------------REUSEABLE RULES----------------> */
+
+.container {
+	max-width: 120rem;
+	padding: 0 3rem;
+	margin: 0 auto;
+}
+
+.heading-primary,
+.heading-secondary {
+	font-weight: var(--font-black);
+	line-height: 1.2;
+}
+.heading-primary {
+	font-size: 7.8rem;
+	max-width: 10ch;
+}
+
+.heading-secondary {
+	font-size: 4.8rem;
+}
+
+.subhead {
+	max-width: 70ch;
+	font-size: 1.4rem;
+	color: var(--white-50);
+	margin-top: 1.4rem;
+}
+
+.btn {
+	display: inline-block;
+
+	text-decoration: none;
+	font-size: 1.8rem;
+	font-weight: var(--semi-bold);
+	color: currentColor;
+	padding: 1.6rem 4rem;
+	border-radius: 50px;
+
+	border: none;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-full {
+	background-color: var(--primary-color);
+}
+
+.btn-outline {
+	outline: 1px solid var(--white);
+}
+
+.btn-long {
+	margin-top: 3.4rem;
+	line-height: 1;
+	padding-left: 7.2rem;
+	padding-right: 7.2rem;
+}
+
+.grid {
+	display: grid;
+}
+
+.flex {
+	display: flex;
+}
+
+/* <----------------HEADER RULES----------------> */
+
+.header {
+	padding-top: 5rem;
+	/* background: linear-gradient(to bottom, #111111, rgba(119, 119, 119, 0.02)); */
+}
+
+.nav-n-logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.fitness-logo {
+	font-size: 3.6rem;
+	font-weight: var(--extra-bold);
+	color: var(--primary-color);
+	font-style: italic;
+}
+
+.main-nav-list {
+	display: flex;
+	align-items: center;
+	gap: 5rem;
+	list-style: none;
+	border: 1px solid var(--white-10);
+	padding: 3px;
+	padding-right: 2rem;
+	border-radius: 50px;
+	font-size: 1.8rem;
+}
+
+.main-nav-link {
+	display: inline-block;
+	color: currentColor;
+	text-decoration: none;
+}
+
+.active-page {
+	background-color: var(--primary-color);
+	padding: 0.5rem 2rem;
+	border-radius: 50px;
+}
+
+.hero {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	margin-top: 3.2rem;
+}
+
+.hero-description {
+	font-size: 1.6rem;
+	margin: 2.8rem 0;
+	color: var(--white-50);
+	max-width: 40ch;
+}
+
+.heading-primary span {
+	font-family: var(--font-fansy);
+	font-weight: var(--regular);
+}
+
+.header .btn-full {
+	margin-right: 2rem;
+}
+
+.hero-img-box {
+	justify-self: center;
+	position: relative;
+}
+
+.floting-box-1,
+.floting-box-2 {
+	padding: 2.2rem;
+	background-color: var(--grey-60);
+	border: 1px solid var(--grey);
+	border-radius: 1.2rem;
+	letter-spacing: 1px;
+	line-height: 1;
+	position: absolute;
+}
+
+.floting-box-1 {
+	bottom: 6.4rem;
+	left: -10.6rem;
+
+	align-items: center;
+	gap: 1rem;
+}
+
+.floting-box-2 {
+	top: 12.4rem;
+	right: -6.6rem;
+}
+
+.circle {
+	width: 4rem;
+	height: 4rem;
+	background-color: var(--primary-color);
+	border-radius: 50%;
+}
+
+.floting-span {
+	font-size: 2rem;
+	font-weight: var(--font-black);
+}
+
+.floting-text {
+	margin-top: 1.2rem;
+	font-size: 1.4rem;
+	color: var(--white-60);
+}
+
+.floting-box-2 .floting-span {
+	font-size: 3.2rem;
+}
+
+.floting-box-2 .floting-text {
+	font-size: 1.2rem;
+}
+
+/* <----------------CYH RULES----------------> */
+
+.section-cyh {
+	margin-top: 9.6rem;
+}
+
+.section-cyh .heading-secondary {
+	text-align: center;
+}
+.section-cyh .subhead {
+	text-align: center;
+	margin: 1.4rem auto 0 auto;
+}
+.cyh-components .subhead {
+	margin-top: 0;
+	line-height: 1.4;
+}
+
+.cyh-components {
+	grid-template-columns: repeat(4, 1fr);
+	gap: 4rem;
+	margin-top: 5.8rem;
+}
+.cyh-component {
+	justify-items: center;
+}
+.cyh-component-img {
+	height: 18rem;
+	width: 18rem;
+	border-radius: 50%;
+	border: 4px solid var(--white-10);
+	margin-bottom: 3rem;
+}
+
+.cyh-component-headline {
+	font-size: 1.8rem;
+	max-width: 10ch;
+}
+
+/* <----------------CARD RULES----------------> */
+
+.section-card {
+	margin-top: 9.6rem;
+}
+
+.card-box {
+	background-color: var(--white-10);
+	border-radius: 1.8rem;
+	padding: 4rem;
+	padding-left: 6rem;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.section-card .heading-secondary {
+	max-width: 10ch;
+}
+
+.section-card .subhead {
+	max-width: 45ch;
+}
+
+.card-img-box {
+	width: 36rem;
+	height: 30rem;
+	position: relative;
+	overflow: hidden;
+	border-radius: 2rem;
+}
+
+.card-img-box img {
+	position: absolute;
+	top: 120px;
+	right: 160px;
+	transform: scale(3.4);
+}
+
+/* <----------------BMI RULES----------------> */
+
+.section-bmi {
+	margin-top: 9.6rem;
+}
+
+.bmi-bg {
+	margin-top: 9.6rem;
+	background-color: var(--white-10);
+	padding: 5.5rem 0;
+}
+
+.bmi-bg .container {
+	grid-template-columns: 1fr 1.1fr;
+}
+
+.bmi-headline {
+	font-size: 2.6rem;
+	font-weight: var(--font-black);
+}
+
+.bmi-table {
+	margin-top: 5.8rem;
+}
+
+.bmi-table,
+.bmi-table th,
+.bmi-table td {
+	border: 1px solid var(--white-10);
+	border-collapse: collapse;
+	padding: 1.8rem;
+	line-height: 1;
+	text-align: left;
+}
+
+.bmi-table th {
+	font-size: 1.6rem;
+	font-weight: var(--semi-bold);
+}
+.bmi-table td {
+	font-size: 1.4rem;
+	color: var(--white-50);
+}
+
+.bmi-calculator .subhead {
+	max-width: 65ch;
+}
+
+.calculator {
+	margin-top: 4rem;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.2rem;
+}
+
+.calculator input,
+.calculator select {
+	padding: 1.8rem;
+	line-height: 1;
+	font-size: 1.6rem;
+	font-family: inherit;
+	color: var(--white-50);
+	border: none;
+	background-color: var(--white-10);
+	border-radius: 8px;
+	outline: none;
+}
+
+.calculator input::placeholder {
+	color: var(--white);
+}
+
+#factor {
+	grid-area: 3/1/3/-1;
+}
+
+/* <----------------TEAM RULES----------------> */
+
+.section-team {
+	margin-top: 9.6rem;
+}
+
+.section-team .heading-secondary {
+	text-align: center;
+}
+.section-team .subhead {
+	text-align: center;
+	margin: 1.4rem auto 0 auto;
+}
+
+.team {
+	margin-top: 6.2rem;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.8rem;
+	background-color: var(--white-10);
+	padding: 1.8rem;
+	border-radius: 1.6rem;
+}
+
+.staff {
+	height: 30rem;
+	background-size: cover;
+	background-position: center;
+	border-radius: 1.6rem;
+	padding: 2rem;
+	line-height: 1;
+}
+
+.staff-1 {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./images/trainer1.png');
+}
+.staff-2 {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./images/trainer2.png');
+}
+.staff-3 {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./images/trainer3.png');
+}
+.staff-4 {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./images/trainer4.png');
+}
+.staff-5 {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./images/trainer5.png');
+}
+.staff-6 {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./images/trainer6.png');
+}
+
+.staff-name {
+	font-size: 2.2rem;
+	font-weight: var(--extra-bold);
+	line-height: 1.4;
+}
+
+.staff-position {
+	font-size: 1.4rem;
+	color: var(--white-50);
+}
+
+.staff {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+
+/* <----------------FOOTER RULES----------------> */
+
+.section-footer {
+	margin-top: 9.6rem;
+	background-color: var(--white-10);
+	padding-top: 7.2rem;
+}
+
+.section-footer .container {
+	grid-template-columns: 2fr 1fr 1fr;
+}
+
+.section-footer .subhead {
+	line-height: 1.6;
+	font-size: 1.4rem;
+	max-width: 45ch;
+	margin-top: 4rem;
+}
+
+.footer-logo .fitness-logo {
+	font-size: 5.4rem;
+	line-height: 1;
+}
+
+.footer-nav-headline {
+	font-size: 2.6rem;
+	font-weight: var(--bold);
+	line-height: 1;
+}
+
+.footer-nav-list {
+	margin-top: 4.8rem;
+	font-size: 1.8rem;
+	list-style: none;
+	text-decoration: none;
+}
+
+.footer-nav-link {
+	color: var(--white-50);
+	text-decoration: none;
+	line-height: 2.4;
+}
+
+.footer-nav-link:last-child {
+	line-height: 1;
+}
+
+.copyright-info {
+	margin-top: 8rem;
+	grid-area: 3/1/3/-1;
+	padding: 3.8rem 0;
+	font-size: 1.6rem;
+	line-height: 1;
+	color: var(--white-50);
+	text-align: center;
+	border-top: 2px solid var(--white-10);
+}
+
+/* <----------------RESPONSIVE RULES----------------> */
+
+@media screen and (max-width: 65em) {
+	.floting-box-1 {
+		left: -6.6rem;
+	}
+}
+
+@media screen and (max-width: 62em) {
+	.hero {
+		grid-template-columns: 1fr;
+		padding: 0 7.5rem;
+		row-gap: 12rem;
+	}
+
+	.floting-box-2 {
+		top: 5.4rem;
+		right: -2.6rem;
+	}
+
+	.floting-box-1 {
+		bottom: 13.4rem;
+		left: -4.6rem;
+	}
+
+	.cyh-components {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 0;
+	}
+
+	.section-cyh .subhead {
+		max-width: 50ch;
+	}
+
+	.cyh-components .subhead {
+		max-width: 30ch;
+	}
+
+	.card-img-box {
+		width: 26rem;
+		height: 32rem;
+	}
+
+	.card-img-box img {
+		top: 140px;
+		right: 130px;
+		transform: scale(3.8);
+	}
+
+	.section-card .subhead {
+		max-width: 30ch;
+	}
+
+	.section-card .heading-secondary {
+		font-size: 3.2rem;
+	}
+}
